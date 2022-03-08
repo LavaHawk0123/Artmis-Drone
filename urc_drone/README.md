@@ -1,7 +1,7 @@
 # About Artmis Drone #
 
 # Requirements #
-This package is compatible with ROS Noetic version (Ubuntu 18.04). Existing versions on the internet support at most until Gazebo 7. After Gazebo 8.0, the API has gone significant changes; therefore, it was necessary to adapt the package to Gazebo 8.0+ API. As the default version of Gazebo coming with ROS Melodic is 7.0, it is suggested that do not use the full installation but the desktop installation.
+This package is compatible with ROS Noetic version (Ubuntu 20.04). it is suggested that do not use the full installation but the desktop installation.
 ```
 $ sudo apt-get install ros-noetic-desktop
 ```
