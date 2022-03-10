@@ -42,5 +42,5 @@ One can use [rqt_gui](http://wiki.ros.org/rqt_gui) to have an extensive amount o
 forward looking camera :  /drone/camera_top/image_raw
 downward looking camera: /drone/camera_base/image_raw
 GPS data:  /fix
-imu data: /imu
+IMU data: /imu
 ```
