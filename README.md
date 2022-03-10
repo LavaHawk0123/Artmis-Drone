@@ -1,4 +1,4 @@
-# About Project Artmis Drone #
+# Project Artmis: Multipurpouse Drone Simulation #
 
 # Requirements #
 This package is compatible with ROS Noetic version (Ubuntu 20.04). it is suggested that do not use the full installation but the desktop installation.
