@@ -5,6 +5,48 @@ This package is compatible with ROS Noetic version (Ubuntu 20.04). it is suggest
 ```
 $ sudo apt-get install ros-noetic-desktop
 ```
+Build opencv for ROS noetic :
+```
+$ sudo apt-get update -y
+$ sudo apt-get install -y libopencv-dev
+```
+
+Install cv-bridge : 
+```
+$ sudo apt-get install ros-$ROS_DISTRO-cv-bridge
+```
+
+Install Image Transport : 
+```
+$ sudo apt-get update -y
+$ sudo apt-get install -y libimage-transport-dev
+```
+
+Additions to CMakeLists : 
+
+
+In REQUIRED COMPONENTS : 
+```
+find_package(catkin REQUIRED COMPONENTS
+ rospy
+ roscpp
+ sensor_msgs
+ std_msgs
+ cv_bridge
+ image_transport
+)
+```
+Include Directories : 
+```
+include_directories(include ${catkin_INCLUDE_DIRS})
+FIND_PACKAGE( OpenCV REQUIRED )                              
+INCLUDE_DIRECTORIES( ${OpenCV_INCLUDE_DIRS} )
+```
+Building Opencv codes : 
+```
+add_executable(<build file> src/<filename>.cpp)
+target_link_libraries(<build file> ${OpenCV_LIBS} ${catkin_LIBRARIES})
+```
 # Download and Compiling #
 ```
 $ cd <catkin_ws>
