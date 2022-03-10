@@ -2,7 +2,6 @@
 
 # Aruco Detection Node #
 <h2>Base Camera : </h2>
-<br>
 <h3>View 1</h3>
 <br>
 
