@@ -42,7 +42,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 FIND_PACKAGE( OpenCV REQUIRED )                              
 INCLUDE_DIRECTORIES( ${OpenCV_INCLUDE_DIRS} )
 ```
-Building Opencv codes : 
+Building Opencv codes (Add this to your CMakeLists) : 
 ```
 add_executable(<build file> src/<filename>.cpp)
 target_link_libraries(<build file> ${OpenCV_LIBS} ${catkin_LIBRARIES})
