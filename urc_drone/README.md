@@ -1,7 +1,7 @@
-# About sjtu_drone #
+# About Project Artmis #
 
 # Requirements #
-This package is compatible with ROS Noetic version (Ubuntu 18.04). Existing versions on the internet support at most until Gazebo 7. After Gazebo 8.0, the API has gone significant changes; therefore, it was necessary to adapt the package to Gazebo 8.0+ API. As the default version of Gazebo coming with ROS Melodic is 7.0, it is suggested that do not use the full installation but the desktop installation.
+This package is compatible with ROS Noetic version (Ubuntu 20.04). it is suggested that do not use the full installation but the desktop installation.
 ```
 $ sudo apt-get install ros-noetic-desktop
 ```
@@ -28,12 +28,19 @@ In second terminal:
 $ rosrun urc_drone drone_keyboard
 ```
 
+# Running Aruco Localization
+In a third terminal:
+
+```
+$ roslaunch arucoDetection detection_drone.launch
+```
+
 
 # Read sensor data from ROS topics #
 One can use [rqt_gui](http://wiki.ros.org/rqt_gui) to have an extensive amount of utilities for topic visualization and manipulation. Some of the useful topics reside below.
 ```
-forward looking camera :  /drone/front_camera/image_raw
-downward looking camera: /drone/down_camera/image_raw
-sonar data:  /drone/sonar
-laser range data: /drone/laser
+forward looking camera :  /drone/camera_top/image_raw
+downward looking camera: /drone/camera_base/image_raw
+GPS data:  /fix
+imu data: /imu
 ```
